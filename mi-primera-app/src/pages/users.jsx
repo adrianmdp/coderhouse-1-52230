@@ -1,33 +1,33 @@
 import { useEffect, useState } from "react";
 
-const getUsers = new Promise((resolve, reject) => {
-  const users = [
-    {
-      id: "asd123",
-      name: "Juan",
-      lastName: "Perez",
-      email: "juan@coderhouse.com",
-    },
-    {
-      id: "asd456",
-      name: "Ana",
-      lastName: "Fernandez",
-      email: "ana@coderhouse.com",
-    },
-    {
-      id: "asd789",
-      name: "Pedro",
-      lastName: "Mármol",
-      email: "pedro@coderhouse.com",
-    },
-  ];
+// const getUsers = new Promise((resolve, reject) => {
+//   const users = [
+//     {
+//       id: "asd123",
+//       name: "Juan",
+//       lastName: "Perez",
+//       email: "juan@coderhouse.com",
+//     },
+//     {
+//       id: "asd456",
+//       name: "Ana",
+//       lastName: "Fernandez",
+//       email: "ana@coderhouse.com",
+//     },
+//     {
+//       id: "asd789",
+//       name: "Pedro",
+//       lastName: "Mármol",
+//       email: "pedro@coderhouse.com",
+//     },
+//   ];
 
-  setTimeout(() => {
-    resolve(users);
-  }, 2000);
-});
+//   setTimeout(() => {
+//     resolve(users);
+//   }, 2000);
+// });
 
-const Users = () => {
+const Users = ({ children }) => {
   //   const [msg, setMsg] = useState("");
 
   //   const changeUser = () => {
@@ -50,12 +50,12 @@ const Users = () => {
   //     );
   //   }, [msg]);
 
-  const [users, setUser] = useState(getUsers());
+  //   const [users, setUser] = useState(getUsers());
 
   return (
     <>
       {/* <div>{msg}</div> */}
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>ID</th>
@@ -78,11 +78,12 @@ const Users = () => {
             );
           })}
         </tbody>
-      </table>
+      </table> */}
       {/* <button onClick={changeUser}>Modificar user</button>
       <button onClick={() => setMsg("Cambió el estado mensaje")}> */}
       {/* Cambiar msg
       </button> */}
+      {children}
     </>
   );
 };

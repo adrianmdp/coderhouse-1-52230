@@ -41,7 +41,9 @@ function App() {
 
       {/* <TestUseEffect /> */}
 
-      <Users />
+      <Users>
+        <div>Este es un div que llega del parent</div>
+      </Users>
 
       {/* <Button text="Enviar" className="btn btn-secondary" onClick={logout} />
       <Button text="Enviar" className="btn btn-secondary" onClick={sendMail} /> */}
