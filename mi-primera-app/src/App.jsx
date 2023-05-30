@@ -3,6 +3,7 @@ import Button from "./components/common/Button";
 import { PruebaCommon } from "./components/common/PruebaCommon";
 import { TestUseEffect } from "./TestUseEffect";
 import { Users } from "./pages/users";
+import { Movies } from "./pages/movies";
 
 function App() {
   const name = "Pepe";
@@ -41,9 +42,11 @@ function App() {
 
       {/* <TestUseEffect /> */}
 
-      <Users>
+      {/* <Users>
         <div>Este es un div que llega del parent</div>
-      </Users>
+      </Users> */}
+
+      <Movies />
 
       {/* <Button text="Enviar" className="btn btn-secondary" onClick={logout} />
       <Button text="Enviar" className="btn btn-secondary" onClick={sendMail} /> */}
