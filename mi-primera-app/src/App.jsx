@@ -4,6 +4,8 @@ import { PruebaCommon } from "./components/common/PruebaCommon";
 import { TestUseEffect } from "./TestUseEffect";
 import { Users } from "./pages/users";
 import { Movies } from "./pages/movies";
+import { Login } from "./pages/login";
+import { RenderPropExample } from "./components/common/RenderPorpExample";
 
 function App() {
   const name = "Pepe";
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <div>
+      <Login />
       {/* <button onClick={() => setTheme("light")}>modo claro</button>
       <button onClick={() => setTheme("dark")}>Cambiar oscuro</button>
       <h1>{theme}</h1>
@@ -48,8 +51,30 @@ function App() {
 
       <Movies />
 
-      {/* <Button text="Enviar" className="btn btn-secondary" onClick={logout} />
-      <Button text="Enviar" className="btn btn-secondary" onClick={sendMail} /> */}
+      <Button className="btn btn-secondary" onClick={() => {}}>
+        Enviar
+        <i className="fas fa-paper-plane"></i>
+      </Button>
+
+      <Button className="btn btn-secondary" onClick={() => {}} type="submit">
+        Iniciar sesión
+        <i className="fas fa-sign-in-alt"></i>
+      </Button>
+
+      <hr />
+
+      <RenderPropExample>
+        {(title, handleChangeTitle) => (
+          <>
+            <h2>{title}</h2>
+            <button
+              onClick={() => handleChangeTitle("Este es el nuevo título")}
+            >
+              Cambiar título
+            </button>
+          </>
+        )}
+      </RenderPropExample>
 
       {/* <PruebaCommon /> */}
     </div>
