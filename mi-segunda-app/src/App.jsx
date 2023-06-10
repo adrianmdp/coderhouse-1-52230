@@ -1,10 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Login } from "./pages/login";
-import { SignUp } from "./pages/signup";
-import { Home } from "./pages/home";
-import { MainNav } from "./components/MainNav";
-import { UsersList } from "./pages/users-list";
-import { UserDetail } from "./pages/user-detail";
+import { Home, Login, SignUp, UserDetail, UsersList } from "./pages";
+import { MainNav } from "./components";
 
 function App() {
   // Acá los recursos de react-router-dom no funcionan

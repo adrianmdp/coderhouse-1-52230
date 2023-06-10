@@ -1,1 +1,1 @@
-export { Button, Task } from "./common";
+export { Button, Task, TasksList, TaskDetail } from "./common";

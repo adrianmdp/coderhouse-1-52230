@@ -1,13 +1,45 @@
 import { useParams } from "react-router-dom";
+import { getUser } from "../../tmp/data";
+import { useEffect, useState } from "react";
 
 const UserDetail = () => {
-  const params = useParams();
+  const { id } = useParams();
 
-  // Acá tendría que tener la capacidad de obtener ese id
-  // y con ese dato, ir a buscar a alguna fuente, los datos
-  // de ese usuario en particular por id
+  const [user, setUser] = useState(undefined);
 
-  return <div>Mostrar los detalles del usuario con ID: {params.id}</div>;
+  useEffect(() => {
+    console.log(id);
+    getUser(id).then((user) => {
+      setUser(user);
+    });
+  }, [id]);
+
+  if (!user) return <p>Cargando...</p>;
+
+  return (
+    <>
+      <h1>Mostrar los detalles del usuario con ID: {id}</h1>
+
+      <div
+        className="card"
+        style={{ border: "1px solid #CCC", padding: "1rem" }}
+        onClick={() => {
+          console.log("abrir modal con mas detalles");
+        }}
+      >
+        <p>Nombre: {user.name}</p>
+        <p>Email: {user.email}</p>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            console.log("Ver amigos");
+          }}
+        >
+          Ver amigos
+        </button>
+      </div>
+    </>
+  );
 };
 
 export { UserDetail };

@@ -1,15 +1,17 @@
+import { Card, Button } from "react-bootstrap";
 import "./style.scss";
 
-const Task = ({ title, description, category, user, date, status }) => {
+const Task = ({ id, name, description, onTaskClicked, textButton }) => {
   return (
-    <div className={`task ${status}`}>
-      <h2 className="title">{title}</h2>
-      <div>{description}</div>
-      <div>{category}</div>
-      <div>{user}</div>
-      <div>{date}</div>
-      <div>{status}</div>
-    </div>
+    <Card key={name}>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>{description}</Card.Text>
+        <Button variant="primary" onClick={onTaskClicked}>
+          {textButton}
+        </Button>
+      </Card.Body>
+    </Card>
   );
 };
 
