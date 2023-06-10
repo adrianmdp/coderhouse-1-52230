@@ -1,7 +1,8 @@
+import { Footer } from "./components/layout/Footer";
+import { Header } from "./components/layout/Header";
 import {
   AddCategory,
   AddTask,
-  Home,
   Login,
   SignUp,
   TaskDetailContainer,
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<TasksListContainer />} />
           <Route path="/category/:catId" element={<TasksListContainer />} />
@@ -23,6 +25,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/" element={<SignUp />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
