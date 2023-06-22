@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../../components/Button";
-import { Select } from "../../components/Select";
+import { Button } from "../../components/button";
+import { Select } from "../../components/select";
 
 const vehilces = [
   { id: 1, label: "Auto", value: "auto" },

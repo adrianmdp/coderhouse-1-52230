@@ -5,6 +5,8 @@ import { MainNav } from "./components";
 function App() {
   // Acá los recursos de react-router-dom no funcionan
 
+  const abrirAyuda = () => {};
+
   return (
     <>
       <BrowserRouter>

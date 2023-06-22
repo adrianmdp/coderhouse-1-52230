@@ -1,4 +1,4 @@
-import { tasks } from "../../tmp/data";
+import { tasks } from "../../../tmp/data";
 
 const getTasks = async (catId) => {
   return new Promise((resolve, reject) => {

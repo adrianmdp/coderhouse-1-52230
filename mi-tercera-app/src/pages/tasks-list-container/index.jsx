@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { getCategories, getTasks } from "../../services";
+import { getCategories, getTasks } from "../../services/mocks";
 import { TasksList } from "../../components";
 import { Filter } from "./components";
 
